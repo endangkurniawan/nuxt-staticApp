@@ -1,4 +1,5 @@
 <template lang="pug">
+//- Header
 .header
   .container-pluid.mx-3
     .header__wrapper

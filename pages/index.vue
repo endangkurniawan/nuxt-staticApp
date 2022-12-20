@@ -1,9 +1,11 @@
-<template>
-  <Header/>
+<template lang="pug">
+div
+  HeroBanner
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'Home',
+  layout: 'App'
 }
 </script>
