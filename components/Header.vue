@@ -45,7 +45,7 @@ export default {
       const response = [
         {
           name: 'Home',
-          route: '#'
+          route: ''
         },
         {
           name: 'Example Api',
@@ -53,23 +53,23 @@ export default {
         },
         {
           name: 'Product',
-          route: '#'
+          route: '/product'
         },
         {
           name: 'Pricing',
-          route: '#'
+          route: '/pricing'
         },
         {
           name: 'About Us',
-          route: '#'
+          route: '/about-us'
         },
         {
           name: 'Blog',
-          route: '#'
+          route: 'blog'
         },
         {
           name: 'Contact',
-          route: '#'
+          route: 'contact'
         },
       ]
 

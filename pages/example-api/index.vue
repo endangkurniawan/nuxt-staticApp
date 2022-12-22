@@ -21,9 +21,18 @@
                 query: {
                   id: employee.id,
                 }
-              }"
-            >Show</b-button>
-            <a href="#" class="btn btn-secondary" type="button" >Edit</a>
+              }">
+              Show
+            </b-button>
+            <b-button
+              :to="{
+                path: 'example-api/edit',
+                query: {
+                  id: employee.id,
+                }
+              }" >
+              Edit
+            </b-button>
           </td>
           <td class="rowname">
             {{ employee.employee_name }}
@@ -36,8 +45,6 @@
   </template>
 
   <script>
-import path from 'path'
-
     export default {
       name: 'ExampleApiPage',
       layout: 'App',
