@@ -38,7 +38,15 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
   ],
+
+  publicRuntimeConfig: {
+    axios: {
+      baseURL: 'https://dummy.restapiexample.com/'
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
