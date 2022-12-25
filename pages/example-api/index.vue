@@ -1,46 +1,60 @@
 <template>
   <div class="container">
-    <h4 class="table-title mb-4 mt-4">{{ title }}</h4>
-    <button v-on:click="nextPage" class="btn btn-info float-end mb-4" type="button">
-      <i class="fas fa-plus-circle"></i> + Add
-    </button>
-    <table class="table table-bordered align-middle border-dark">
-      <thead class="head text-center">
-        <tr>
-          <th class="id w-25">#</th>
-          <th>Name</th>
-          <th>Age</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(employee, index) in employees" :key="index">
-          <td class="text-center">
-            <b-button
-              :to="{
-                path: 'example-api/show',
-                query: {
-                  id: employee.id,
-                }
-              }">
-              Show
-            </b-button>
-            <b-button
-              :to="{
-                path: 'example-api/edit',
-                query: {
-                  id: employee.id,
-                }
-              }" >
-              Edit
-            </b-button>
-          </td>
-          <td class="rowname">
-            {{ employee.employee_name }}
-          </td>
-          <td>{{ employee.employee_age }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <div class="float-start mt-1">
+              <h4 class="table-title">{{ title }}</h4>
+            </div>
+            <div class="float-end">
+              <button v-on:click="nextPage" class="btn btn-info" type="button">
+                <i class="fas fa-plus-circle"></i> + Add
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <table class="table table-bordered align-middle ">
+              <thead class="head text-center">
+                <tr>
+                  <th class="id w-25">#</th>
+                  <th>Name</th>
+                  <th>Age</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(employee, index) in employees" :key="index">
+                  <td class="text-center">
+                    <b-button
+                      :to="{
+                        path: 'example-api/show',
+                        query: {
+                          id: employee.id,
+                        }
+                      }">
+                      Show
+                    </b-button>
+                    <b-button
+                      :to="{
+                        path: 'example-api/edit',
+                        query: {
+                          id: employee.id,
+                        }
+                      }" >
+                      Edit
+                    </b-button>
+                  </td>
+                  <td class="rowname">
+                    {{ employee.employee_name }}
+                  </td>
+                  <td class="text-center">{{ employee.employee_age }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   </template>
 

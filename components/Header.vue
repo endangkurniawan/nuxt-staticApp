@@ -12,7 +12,7 @@
           ='\n'
           a.header__link(:href="`${item.route}`")
             | {{ item.name }}
-        ButtonAppVue.btn--primary(
+        ButtonAppVue.btn--primary.btn-secondary(
           type="link"
           link="/product"
           title="Get Started"
@@ -121,10 +121,15 @@ export default {
 
 .header__link {
   text-decoration: none;
+  color: #000;
 }
 
 .btn--primary {
   float: right;
+}
+
+.btn--primary:hover {
+  background-color: blue !important;
 }
 
  </style>
